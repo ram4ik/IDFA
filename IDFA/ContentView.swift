@@ -6,11 +6,19 @@
 //
 
 import SwiftUI
+import AdSupport
 
 struct ContentView: View {
+    var idfa = ASIdentifierManager.shared().advertisingIdentifier
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("My IDFA!")
+                .fontWeight(.bold)
+                .padding()
+            Text("\(idfa)")
+                .padding()
+        }
     }
 }
 
